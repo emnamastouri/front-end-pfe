@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pfe app is running!</title>
+</head>
+<body>
+    <header class="header">superviser votre infrastructure </header>
+      <div class="main">
+        <!-- the div that contain the identity select -->
+        <aside class="left">
+          <div class="message" >  Choisir votre identité :</div>
+          <br><br>
+          <input type="submit" value="Administrateur réseau >" class="admin-reseau" (click)="openadminreseaulogin()">
+        <br><br>
+        <input type="submit" value="Agent >" class="agent" (click)="openagentlogin()">
+        </aside>
+        <!-- the div that contain the log -->
+        <aside class="right">
+          <app-admin-reseau-login *ngIf="admin_verif==true"></app-admin-reseau-login>
+          <app-agent-login *ngIf="agent_verif==true"></app-agent-login>
+        </aside>
+      </div>
+    <footer >
+      <p>developper par : Mastouri Emna & Douahem Hibatoallah</p>
+    </footer>
+
+</body>
+</html>
